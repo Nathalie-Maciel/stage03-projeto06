@@ -50,8 +50,9 @@ img {
   padding: 0.8rem;
   margin-top: 3.2rem;
 }
+
 header {
-  margin: 3.2rem 0 3.2rem;
+  margin: 3.2rem 0 0;
 
   text-align: center;
 
@@ -72,7 +73,6 @@ header h1 {
 }
 
 main {
-  display: grid;
   padding: 3.2rem;
 
   background-color: var(--bg-secundary);
@@ -80,15 +80,15 @@ main {
   animation: downtop 700ms 350ms backwards;
 }
 
-main p {
+.header-description {
   text-align: center;
   font-family: var(--ff-texting);
   font-weight: 400;
   color: var(--fc-secondary);
 
-  line-height: 2.5rem;
+  background-color: var(--bg-secundary);
 
-  margin-bottom: 6.3rem;
+  line-height: 2.5rem;
 }
 
 .card-A,
@@ -149,6 +149,10 @@ main p {
   align-items: center;
 }
 
+footer {
+  display: none;
+}
+
 @keyframes topdown {
   0% {
     opacity: 0;
@@ -170,5 +174,86 @@ main p {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --fs-heading: 4.8rem;
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .img-header {
+    margin: auto;
+    width: 50%;
+  }
+
+  .box-header {
+    background-color: var(--bg-terciary);
+
+    height: 7rem;
+  }
+
+  header h1 {
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 5.2rem;
+
+    letter-spacing: 0.2rem;
+    justify-content: center;
+  }
+
+  .header-description {
+    color: var(--fc-primary);
+    margin: 0 10rem 12.5rem 10rem;
+    line-height: 4rem;
+    font-size: 2.5rem;
+    background-color: var(--bg-primary);
+  }
+
+  main {
+    padding: 6.4rem;
+
+    background: #ffffff;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+  }
+
+  .card-A,
+  .card-B {
+    position: relative;
+
+    font-family: var(--ff-heading);
+  }
+
+  .card-A img,
+  .card-B img {
+    width: 90%;
+  }
+
+  .card-A h2,
+  .card-B h2 {
+    display: none;
+  }
+
+  .card-A span,
+  .card-B span {
+    display: none;
+  }
+
+  footer {
+    display: block;
+    line-height: 2.8rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 58%;
+    color: #4a4e69;
+    height: auto;
   }
 }
