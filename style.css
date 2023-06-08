@@ -184,7 +184,10 @@ footer {
 
   .page {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    /*grid-template-columns: 1fr 2fr;
+    display: grid;*/
+
+    grid-template-columns: 500px 1fr;
   }
 
   .img-header {
@@ -219,9 +222,14 @@ footer {
 
     background: #ffffff;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .img-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%;
   }
 
   .card-A,
@@ -249,11 +257,9 @@ footer {
   footer {
     display: block;
     line-height: 2.8rem;
-
-    position: absolute;
-    bottom: 0;
-    left: 58%;
+    background-color: #ffffff;
     color: #4a4e69;
     height: auto;
+    text-align: center;
   }
 }
